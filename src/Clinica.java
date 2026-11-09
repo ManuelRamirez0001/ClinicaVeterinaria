@@ -1,4 +1,4 @@
-public class Clinica {
+public class Clinica implements Asegurable {
     private String nombre;
     private String direccion;
     private boolean asegurado;
@@ -31,5 +31,15 @@ public class Clinica {
 
     public void setAsegurado(boolean asegurado) {
         this.asegurado = asegurado;
+    }
+
+    @Override
+    public double calcularPrimaSeguro() {
+        return 500000;
+    }
+
+    @Override
+    public String obtenerNumeroPoliza() {
+        return " POL-CLINICA-[Clinica-Pepa-09]";
     }
 }
